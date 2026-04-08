@@ -1,0 +1,34 @@
+v 4
+file . "testbench/tb_control_unit.vhd" "2ad46fee301865aba372923aa4a44873a252b232" "20260401174246.961":
+  entity tb_control_unit at 13( 507) + 0 on 31;
+  architecture behavioral of tb_control_unit at 19( 599) + 0 on 32;
+file . "testbench/tb_register_file.vhd" "2eb049adb17123448026dff8f0541cf26eb69950" "20260401174246.839":
+  entity tb_register_file at 16( 526) + 0 on 27;
+  architecture behavioral of tb_register_file at 23( 646) + 0 on 28;
+file . "testbench/tb_alu.vhd" "a08c57e82f4684e0191496dc833d4594a64ce09f" "20260401174246.718":
+  entity tb_alu at 16( 539) + 0 on 23;
+  architecture behavioral of tb_alu at 23( 639) + 0 on 24;
+file . "src/instruction_memory.vhd" "98fd17ef6a864e74c72ff79fc5ba31440bb35e5e" "20260401174246.623":
+  entity instruction_memory at 26( 1091) + 0 on 19;
+  architecture behavioral of instruction_memory at 37( 1391) + 0 on 20;
+file . "src/data_memory.vhd" "0e2ae82ade589f81a69a728515d46e83a1472ea3" "20260401174246.552":
+  entity data_memory at 14( 549) + 0 on 15;
+  architecture behavioral of data_memory at 29( 1106) + 0 on 16;
+file . "src/alu.vhd" "fb5992bf041c71e53abc1121477fffc7749af10a" "20260401174246.407":
+  entity alu at 13( 490) + 0 on 11;
+  architecture behavioral of alu at 27( 962) + 0 on 12;
+file . "src/alu_control.vhd" "ab9611691b4aa796c08d66d2f3e257eb36afa3fa" "20260401174246.531":
+  entity alu_control at 20( 740) + 0 on 13;
+  architecture behavioral of alu_control at 31( 1074) + 0 on 14;
+file . "src/register_file.vhd" "f4e5d54660d27c1947127eba142dddd0518671c7" "20260401174246.581":
+  entity register_file at 15( 621) + 0 on 17;
+  architecture behavioral of register_file at 33( 1414) + 0 on 18;
+file . "src/control_unit.vhd" "f8584c6e02d4b55c7da373a23f335e240883317c" "20260401174246.651":
+  entity control_unit at 23( 809) + 0 on 21;
+  architecture behavioral of control_unit at 45( 1896) + 0 on 22;
+file . "testbench/tb_data_memory.vhd" "df9e06965598e850abe391f44c9181a242a78d94" "20260401174246.787":
+  entity tb_data_memory at 13( 502) + 0 on 25;
+  architecture behavioral of tb_data_memory at 20( 618) + 0 on 26;
+file . "testbench/tb_instruction_memory.vhd" "72d5e3c50e766384cb283188f9e1b81b5aee51a6" "20260401174246.905":
+  entity tb_instruction_memory at 16( 584) + 0 on 29;
+  architecture behavioral of tb_instruction_memory at 23( 714) + 0 on 30;

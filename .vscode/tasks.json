@@ -1,0 +1,75 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile All Sources",
+      "type": "shell",
+      "command": "ghdl -a --std=08 src/alu.vhd src/alu_control.vhd src/data_memory.vhd src/register_file.vhd src/instruction_memory.vhd src/control_unit.vhd",
+      "group": "build",
+      "presentation": { "reveal": "always" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Compile Testbenches",
+      "type": "shell",
+      "command": "ghdl -a --std=08 testbench/tb_alu.vhd testbench/tb_data_memory.vhd testbench/tb_register_file.vhd testbench/tb_instruction_memory.vhd testbench/tb_control_unit.vhd",
+      "group": "build",
+      "dependsOn": "Compile All Sources",
+      "presentation": { "reveal": "always" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run: ALU (Task 2)",
+      "type": "shell",
+      "command": "ghdl -e --std=08 tb_ALU && ghdl -r --std=08 tb_ALU --vcd=waveforms/tb_alu.vcd",
+      "group": "test",
+      "dependsOn": "Compile Testbenches",
+      "presentation": { "reveal": "always" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run: Data Memory (Task 1)",
+      "type": "shell",
+      "command": "ghdl -e --std=08 tb_Data_Memory && ghdl -r --std=08 tb_Data_Memory --vcd=waveforms/tb_data_memory.vcd",
+      "group": "test",
+      "dependsOn": "Compile Testbenches",
+      "presentation": { "reveal": "always" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run: Register File (Task 3)",
+      "type": "shell",
+      "command": "ghdl -e --std=08 tb_Register_File && ghdl -r --std=08 tb_Register_File --vcd=waveforms/tb_register_file.vcd",
+      "group": "test",
+      "dependsOn": "Compile Testbenches",
+      "presentation": { "reveal": "always" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run: Instruction Memory (Task 4)",
+      "type": "shell",
+      "command": "ghdl -e --std=08 tb_Instruction_Memory && ghdl -r --std=08 tb_Instruction_Memory --vcd=waveforms/tb_instruction_memory.vcd",
+      "group": "test",
+      "dependsOn": "Compile Testbenches",
+      "presentation": { "reveal": "always" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run: Control Unit (Task 5)",
+      "type": "shell",
+      "command": "ghdl -e --std=08 tb_Control_Unit && ghdl -r --std=08 tb_Control_Unit --vcd=waveforms/tb_control_unit.vcd",
+      "group": "test",
+      "dependsOn": "Compile Testbenches",
+      "presentation": { "reveal": "always" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run ALL Tests",
+      "type": "shell",
+      "command": "mkdir -p waveforms && ghdl -a --std=08 src/alu.vhd src/alu_control.vhd src/data_memory.vhd src/register_file.vhd src/instruction_memory.vhd src/control_unit.vhd testbench/tb_alu.vhd testbench/tb_data_memory.vhd testbench/tb_register_file.vhd testbench/tb_instruction_memory.vhd testbench/tb_control_unit.vhd && ghdl -e --std=08 tb_ALU && ghdl -r --std=08 tb_ALU --vcd=waveforms/tb_alu.vcd && ghdl -e --std=08 tb_Data_Memory && ghdl -r --std=08 tb_Data_Memory --vcd=waveforms/tb_data_memory.vcd && ghdl -e --std=08 tb_Register_File && ghdl -r --std=08 tb_Register_File --vcd=waveforms/tb_register_file.vcd && ghdl -e --std=08 tb_Instruction_Memory && ghdl -r --std=08 tb_Instruction_Memory --vcd=waveforms/tb_instruction_memory.vcd && ghdl -e --std=08 tb_Control_Unit && ghdl -r --std=08 tb_Control_Unit --vcd=waveforms/tb_control_unit.vcd && echo '===== ALL TESTS PASSED ====='",
+      "group": { "kind": "test", "isDefault": true },
+      "presentation": { "reveal": "always" },
+      "problemMatcher": []
+    }
+  ]
+}
